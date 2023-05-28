@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include tamirhane *.css
+recursive-include tamirhane *.csv
+recursive-include tamirhane *.html
+recursive-include tamirhane *.ico
+recursive-include tamirhane *.js
+recursive-include tamirhane *.json
+recursive-include tamirhane *.md
+recursive-include tamirhane *.png
+recursive-include tamirhane *.py
+recursive-include tamirhane *.svg
+recursive-include tamirhane *.txt
+recursive-exclude tamirhane *.pyc
