@@ -1,0 +1,177 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-27 16:24:51.660010",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tamirci_adi",
+  "ekle",
+  "status",
+  "sigorta",
+  "police_no",
+  "dosya_no",
+  "eksper",
+  "section_break_mnznl",
+  "sase_no",
+  "motor_no",
+  "plaka",
+  "bolge",
+  "fuel",
+  "section_break_wz8ka",
+  "ticari_ad\u0131",
+  "model",
+  "renk",
+  "km",
+  "customer",
+  "section_break_bswcn",
+  "items",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "tamirci_adi",
+   "fieldtype": "Link",
+   "label": "Tamirci Ad\u0131",
+   "options": "User"
+  },
+  {
+   "fieldname": "ekle",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Beklemede\nFatura Bekleniyor\n\u00d6deme Bekleniyor\nTamamland\u0131"
+  },
+  {
+   "fieldname": "section_break_mnznl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "motor_no",
+   "fieldtype": "Data",
+   "label": "Motor No"
+  },
+  {
+   "fieldname": "plaka",
+   "fieldtype": "Data",
+   "label": "Plaka"
+  },
+  {
+   "fieldname": "section_break_wz8ka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticari_ad\u0131",
+   "fieldtype": "Data",
+   "label": "Ticari ad\u0131"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "renk",
+   "fieldtype": "Data",
+   "label": "Renk"
+  },
+  {
+   "fieldname": "km",
+   "fieldtype": "Int",
+   "label": "Kilometre"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "M\u00fcsteri Ad\u0131",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "section_break_bswcn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Muayene Tablosu",
+   "options": "Arac Durum Bilgisi Tamamlanan"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bekleyen Araclar",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "sigorta",
+   "fieldtype": "Check",
+   "label": "Sigorta \u00fczerinden tamir edilecek"
+  },
+  {
+   "fieldname": "police_no",
+   "fieldtype": "Data",
+   "label": "Poli\u00e7e No"
+  },
+  {
+   "fieldname": "dosya_no",
+   "fieldtype": "Data",
+   "label": "Dosya No"
+  },
+  {
+   "fieldname": "eksper",
+   "fieldtype": "Data",
+   "label": "Eksper Ad\u0131"
+  },
+  {
+   "fieldname": "bolge",
+   "fieldtype": "Data",
+   "label": "B\u00f6lge"
+  },
+  {
+   "fieldname": "fuel",
+   "fieldtype": "Data",
+   "label": "Yak\u0131t"
+  },
+  {
+   "fieldname": "sase_no",
+   "fieldtype": "Data",
+   "label": "\u015ease No"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-09-02 19:26:51.754028",
+ "modified_by": "Administrator",
+ "module": "E-Tamirhane",
+ "name": "Tamamlanan araclar",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

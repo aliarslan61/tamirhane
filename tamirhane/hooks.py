@@ -26,10 +26,10 @@ app_license = "MIT"
 # webform_include_css = {"doctype": "public/css/doctype.css"}
 
 # include js in page
-# page_js = {"page" : "public/js/file.js"}
+# page_js = {"UOM" : "public/js/cusotm.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {"Yeni Kayit" : "public/js/custom.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
@@ -102,13 +102,18 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-#	"*": {
-#		"on_update": "method",
-#		"on_cancel": "method",
-#		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Yeni Kayit": {
+		"on_change": "tamirhane.e_tamirhane.ocr.handle_image_upload",
+        "on_submit": "tamirhane.e_tamirhane.ocr.create_new_bekleyen_arac"
+	},
+ 	"Bekleyen Araclar": {
+		"on_update": "tamirhane.e_tamirhane.ocr.create_new_biten_arac"
+	},
+    # "Lead": {
+    #     "on_change": "tamirhane.e_tamirhane.pipedrive.pipedrive_integration",
+    # }
+}
 
 # Scheduled Tasks
 # ---------------

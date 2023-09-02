@@ -1,0 +1,140 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-27 19:25:01.083060",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "ekle",
+  "section_break_mnznl",
+  "section_break_vvthl",
+  "sase_no",
+  "motor_no",
+  "plaka",
+  "section_break_wz8ka",
+  "ticari_ad\u0131",
+  "brand",
+  "model",
+  "renk",
+  "customer",
+  "ulke",
+  "bolge",
+  "fuel",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "ekle",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "fieldname": "section_break_mnznl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_vvthl",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "motor_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Motor No"
+  },
+  {
+   "fieldname": "plaka",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Plaka"
+  },
+  {
+   "fieldname": "section_break_wz8ka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "ticari_ad\u0131",
+   "fieldtype": "Data",
+   "label": "Ticari ad\u0131"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Marka",
+   "options": "Markalar"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "renk",
+   "fieldtype": "Data",
+   "label": "Renk"
+  },
+  {
+   "fieldname": "ulke",
+   "fieldtype": "Data",
+   "label": "\u00dclke"
+  },
+  {
+   "fieldname": "bolge",
+   "fieldtype": "Data",
+   "label": "B\u00f6lge"
+  },
+  {
+   "fieldname": "fuel",
+   "fieldtype": "Data",
+   "label": "Yak\u0131t"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Yeni Kayit",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "sase_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "\u015ease No"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "M\u00fcsteri Ad\u0131",
+   "options": "Customer"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-02 19:25:48.402457",
+ "modified_by": "Administrator",
+ "module": "E-Tamirhane",
+ "name": "Yeni Kayit",
+ "naming_rule": "Random",
+ "nsm_parent_field": "parent_yeni_kayit",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

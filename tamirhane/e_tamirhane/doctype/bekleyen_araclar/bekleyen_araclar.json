@@ -1,0 +1,197 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-27 17:34:00.438490",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "tamirci_adi",
+  "ekle",
+  "status",
+  "sigorta",
+  "sigorta_acentesi",
+  "police_no",
+  "section_break_mnznl",
+  "sase_no",
+  "motor_no",
+  "plaka",
+  "fuel",
+  "bolge",
+  "section_break_wz8ka",
+  "ticari_adi",
+  "model",
+  "renk",
+  "km",
+  "customer",
+  "section_break_bswcn",
+  "items",
+  "amended_from",
+  "start_date"
+ ],
+ "fields": [
+  {
+   "fieldname": "tamirci_adi",
+   "fieldtype": "Link",
+   "label": "Tamirci Ad\u0131",
+   "options": "User"
+  },
+  {
+   "fieldname": "ekle",
+   "fieldtype": "Attach Image"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Beklemede\nTamir ediliyor\nOnay bekleniyor\nTamir edildi"
+  },
+  {
+   "default": "0",
+   "fieldname": "sigorta",
+   "fieldtype": "Check",
+   "label": "Sigorta \u00fczerinden tamir edilecek"
+  },
+  {
+   "depends_on": "eval:doc.sigorta == 1",
+   "fieldname": "sigorta_acentesi",
+   "fieldtype": "Data",
+   "label": "Sigorta Acentesi"
+  },
+  {
+   "depends_on": "eval:doc.sigorta == 1",
+   "fieldname": "police_no",
+   "fieldtype": "Data",
+   "label": "Police No"
+  },
+  {
+   "fieldname": "section_break_mnznl",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "motor_no",
+   "fieldtype": "Data",
+   "label": "Motor No"
+  },
+  {
+   "fieldname": "plaka",
+   "fieldtype": "Data",
+   "label": "Plaka"
+  },
+  {
+   "fieldname": "section_break_wz8ka",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "label": "Model"
+  },
+  {
+   "fieldname": "renk",
+   "fieldtype": "Data",
+   "label": "Renk"
+  },
+  {
+   "fieldname": "km",
+   "fieldtype": "Int",
+   "label": "Kilometre"
+  },
+  {
+   "fieldname": "section_break_bswcn",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Bekleyen Araclar",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "label": "Muayene Tablosu",
+   "options": "arac durum bilgisi"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "M\u00fcsteri Ad\u0131",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Data",
+   "label": "Araca ba\u015flama saati"
+  },
+  {
+   "fieldname": "sase_no",
+   "fieldtype": "Data",
+   "label": "\u015ease No"
+  },
+  {
+   "fieldname": "fuel",
+   "fieldtype": "Data",
+   "label": "Yak\u0131t"
+  },
+  {
+   "fieldname": "bolge",
+   "fieldtype": "Data",
+   "label": "B\u00f6lge"
+  },
+  {
+   "fieldname": "ticari_adi",
+   "fieldtype": "Data",
+   "label": "Ticari ad\u0131"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2023-09-02 19:45:38.016746",
+ "modified_by": "Administrator",
+ "module": "E-Tamirhane",
+ "name": "Bekleyen Araclar",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Beklemede"
+  },
+  {
+   "color": "Green",
+   "title": "Tamir ediliyor"
+  },
+  {
+   "color": "Light Blue",
+   "title": "Onay bekleniyor"
+  },
+  {
+   "color": "Green",
+   "title": "Tamir edildi"
+  }
+ ]
+}
