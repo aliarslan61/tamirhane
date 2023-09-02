@@ -15,6 +15,7 @@
   "sigorta_acentesi",
   "police_no",
   "section_break_mnznl",
+  "brand",
   "sase_no",
   "motor_no",
   "plaka",
@@ -149,12 +150,18 @@
    "fieldname": "ticari_adi",
    "fieldtype": "Data",
    "label": "Ticari ad\u0131"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "label": "Marka",
+   "options": "Brand"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-02 19:45:38.016746",
+ "modified": "2023-09-02 20:43:42.920111",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Bekleyen Araclar",
