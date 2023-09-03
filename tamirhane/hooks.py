@@ -107,9 +107,9 @@ doc_events = {
 	# 	"on_change": "tamirhane.e_tamirhane.ocr.handle_image_upload",
     #     "on_submit": "tamirhane.e_tamirhane.ocr.create_new_bekleyen_arac"
 	# },
- 	"Bekleyen Araclar": {
-		"on_update": "tamirhane.e_tamirhane.ocr.create_new_biten_arac"
-	},
+ 	#"Bekleyen Araclar": {
+	#	"on_update": "tamirhane.e_tamirhane.ocr.create_new_biten_arac"
+	#},
     # "Lead": {
     #     "on_change": "tamirhane.e_tamirhane.pipedrive.pipedrive_integration",
     # }
