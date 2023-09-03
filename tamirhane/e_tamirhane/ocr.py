@@ -10,7 +10,6 @@ import io
 import datetime
 
 
-
 @frappe.whitelist()
 def convert_image_to_binary(doc_name):
     
@@ -131,11 +130,11 @@ def create_new_biten_arac(doc, arg):
         test = 1
         new_biten_arac_doc.save(ignore_permissions=True)
         frappe.db.commit()
-        frappe.db.set_value(new_biten_arac_doc.doctype, new_biten_arac_doc.name, "docstatus", 2)
+        frappe.db.set_value(doc.doctype, doc.name, "docstatus", 2)
         frappe.db.commit()
-        frappe.delete_doc("Workstation Ticketing", new_biten_arac_doc.name)
+        frappe.delete_doc(doc.doctype, doc.name)
         frappe.db.commit()
-    return
+    return new_biten_arac_doc.name
 
           
      
