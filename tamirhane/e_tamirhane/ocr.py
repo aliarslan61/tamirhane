@@ -10,6 +10,7 @@ import io
 import datetime
 
 
+
 @frappe.whitelist()
 def convert_image_to_binary(doc_name):
     
