@@ -49,7 +49,7 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Beklemede\nKaportada\nBoyada\nToplanacak\nMekanik\nPar\u00e7a bekleniyor\nSigorta dosyas\u0131 a\u00e7\u0131lacak\nEksper bekleniyor\nEkspertiz yap\u0131lacak\nEksik evrak bekleniyor\nFatura onay\u0131 bekleniyor\nTamamland\u0131"
+   "options": "Beklemede\nKaportada\nBoyada\nToplanacak\nMekanik\nPar\u00e7a bekleniyor\nSigorta dosyas\u0131 a\u00e7\u0131lacak\nEksper bekleniyor\nEkspertiz yap\u0131lacak\nEksik evrak bekleniyor\nFatura onay\u0131 bekleniyor\nTamamlandi"
   },
   {
    "default": "0",
