@@ -92,7 +92,7 @@ def create_new_biten_arac(doc, arg):
         new_biten_arac_doc = frappe.get_doc(
             {
                 "doctype": "Tamamlanan araclar",
-                "ticari_adi":doc.ticari_adı,
+                "ticari_adi":doc.ticari_adi,
                 "customer": doc.customer,
                 "sase_no": doc.sase_no,
                 "plaka": doc.plaka,
@@ -114,7 +114,7 @@ def create_new_biten_arac(doc, arg):
                 "items": [
                     {
                         "parca": child.parca,
-                        "p_adı": child.p_adı,
+                        "p_adi": child.p_adi,
                         "durum": child.durum,
                         "fiyat": child.fiyat,
                         "iscilik":child.iscilik
@@ -143,7 +143,7 @@ def handle_image_upload(doc, method):
         file_name = doc.ekle.split('/')[-1]
         response = send_binary_data_via_api(api_url, file_name, binary_data)
         result = parse_fields_from_response(response, doc.name)
-        delete_doc=create_new_bekleyen_arac(doc,method)
+        # delete_doc=create_new_bekleyen_arac(doc,method)
 
 
 

@@ -23,7 +23,7 @@
   "bolge",
   "fuel",
   "section_break_wz8ka",
-  "ticari_ad\u0131",
+  "ticari_adi",
   "model",
   "renk",
   "km",
@@ -67,11 +67,6 @@
   {
    "fieldname": "section_break_wz8ka",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "ticari_ad\u0131",
-   "fieldtype": "Data",
-   "label": "Ticari ad\u0131"
   },
   {
    "fieldname": "model",
@@ -154,11 +149,16 @@
    "fieldtype": "Link",
    "label": "Marka",
    "options": "Brand"
+  },
+  {
+   "fieldname": "ticari_adi",
+   "fieldtype": "Data",
+   "label": "Ticari ad\u0131"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-02 20:44:13.465519",
+ "modified": "2023-09-03 12:45:47.067124",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Tamamlanan araclar",
