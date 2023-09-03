@@ -14,6 +14,7 @@
   "sigorta",
   "sigorta_acentesi",
   "police_no",
+  "eksper",
   "section_break_mnznl",
   "model",
   "sase_no",
@@ -150,12 +151,18 @@
    "fieldname": "ticari_adi",
    "fieldtype": "Data",
    "label": "Model"
+  },
+  {
+   "depends_on": "eval:doc.sigorta == 1",
+   "fieldname": "eksper",
+   "fieldtype": "Data",
+   "label": "Eksper Ad\u0131"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-03 19:14:35.053813",
+ "modified": "2023-09-03 20:29:10.248136",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Bekleyen Araclar",
