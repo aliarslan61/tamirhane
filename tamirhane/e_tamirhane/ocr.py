@@ -9,6 +9,8 @@ from PIL import Image
 import io
 import datetime
 
+
+@frappe.whitelist()
 def convert_image_to_binary(doc_name):
     
     doc = frappe.get_doc('Yeni Kayit', doc_name)
@@ -24,7 +26,7 @@ def convert_image_to_binary(doc_name):
 
 
 
-
+@frappe.whitelist()
 def send_binary_data_via_api(api_url, file_name, binary_data):
     headers = {
         'Content-Type': 'application/json',
@@ -42,6 +44,7 @@ def send_binary_data_via_api(api_url, file_name, binary_data):
 
     return response.json()  
 
+@frappe.whitelist()
 def parse_fields_from_response(data, doc_name):
     if not isinstance(data, dict):
         frappe.throw(_("The response data should be a dictionary."))
@@ -55,9 +58,10 @@ def parse_fields_from_response(data, doc_name):
     frappe.db.set_value("Yeni Kayit", doc_name, "bolge", data.get("region"))    
     frappe.db.set_value("Yeni Kayit", doc_name, "fuel", data.get("fuel"))    
     frappe.db.commit()
-
-
-def create_new_bekleyen_arac(doc, method, force=1):
+    return
+@frappe.whitelist()
+def create_new_bekleyen_arac(doc):
+    doc = frappe.get_doc("Yeni Kayit", doc)
     if doc.sase_no and doc.plaka and doc.motor_no and doc.docstatus == 1:
             
         new_bekleyen_arac = frappe.get_doc(
@@ -79,16 +83,17 @@ def create_new_bekleyen_arac(doc, method, force=1):
             )
         new_bekleyen_arac.save(ignore_permissions=True)
         frappe.db.commit()
-    
-        frappe.db.set_value("Yeni Kayit", doc.name, "docstatus", 2)
-        frappe.delete_doc("Bekleyen Araclar", doc.name)
+        frappe.db.set_value(doc.doctype, doc.name, "docstatus", 2)
+        frappe.db.commit()
+        frappe.delete_doc("Yeni Kayit", doc.name)
         frappe.db.commit()
     else:
         frappe.throw("Lütfen Şase No, Plaka ve Motor No giriniz")
-    return 
+    return new_bekleyen_arac.name
 
+@frappe.whitelist()
 def create_new_biten_arac(doc, arg):
-    if doc.status == "Tamir edildi":
+    if doc.status == "Tamamlandı":
         new_biten_arac_doc = frappe.get_doc(
             {
                 "doctype": "Tamamlanan araclar",
@@ -127,23 +132,25 @@ def create_new_biten_arac(doc, arg):
         test = 1
         new_biten_arac_doc.save(ignore_permissions=True)
         frappe.db.commit()
-        frappe.delete_doc("Bekleyen Araclar", doc.name)
+        frappe.db.set_value(new_biten_arac_doc.doctype, new_biten_arac_doc.name, "docstatus", 2)
         frappe.db.commit()
-  
+        frappe.delete_doc("Workstation Ticketing", new_biten_arac_doc.name)
+        frappe.db.commit()
     return
 
           
      
+@frappe.whitelist()
+def handle_image_upload(doc):
+    doc = frappe.get_doc("Yeni Kayit", doc)
 
-def handle_image_upload(doc, method):
+
     if not doc.sase_no:
-        
         binary_data = convert_image_to_binary(doc.name)
         api_url = "https://ocr.syncmaze.com/api/OCR/VLicense"
         file_name = doc.ekle.split('/')[-1]
         response = send_binary_data_via_api(api_url, file_name, binary_data)
         result = parse_fields_from_response(response, doc.name)
-        # delete_doc=create_new_bekleyen_arac(doc,method)
 
 
 
