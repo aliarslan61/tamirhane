@@ -127,7 +127,6 @@ def create_new_biten_arac(doc, arg):
             }
         )
                 
-        test = 1
         new_biten_arac_doc.save(ignore_permissions=True)
         frappe.db.commit()
         frappe.db.set_value(doc.doctype, doc.name, "docstatus", 2)
