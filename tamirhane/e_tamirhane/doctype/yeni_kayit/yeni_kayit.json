@@ -15,9 +15,8 @@
   "motor_no",
   "plaka",
   "section_break_wz8ka",
-  "ticari_adi",
-  "brand",
   "model",
+  "ticari_adi",
   "renk",
   "customer",
   "ulke",
@@ -55,15 +54,10 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "brand",
+   "fieldname": "model",
    "fieldtype": "Link",
    "label": "Marka",
    "options": "Brand"
-  },
-  {
-   "fieldname": "model",
-   "fieldtype": "Data",
-   "label": "Model"
   },
   {
    "fieldname": "renk",
@@ -71,6 +65,7 @@
    "label": "Renk"
   },
   {
+   "default": "TR",
    "fieldname": "ulke",
    "fieldtype": "Data",
    "label": "\u00dclke"
@@ -109,13 +104,13 @@
   {
    "fieldname": "ticari_adi",
    "fieldtype": "Data",
-   "label": "Ticari ad\u0131"
+   "label": "Model"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-03 13:17:30.266329",
+ "modified": "2023-09-03 19:21:09.916128",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Yeni Kayit",

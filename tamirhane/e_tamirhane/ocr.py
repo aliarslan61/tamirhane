@@ -62,7 +62,7 @@ def parse_fields_from_response(data, doc_name):
 @frappe.whitelist()
 def create_new_bekleyen_arac(doc):
     doc = frappe.get_doc("Yeni Kayit", doc)
-    if doc.sase_no and doc.plaka and doc.motor_no and doc.docstatus == 1:
+    if doc.plaka and doc.docstatus == 1:
             
         new_bekleyen_arac = frappe.get_doc(
                 {
@@ -74,7 +74,6 @@ def create_new_bekleyen_arac(doc):
                         "renk":doc.renk,
                         "model":doc.model,
                         "bolge":doc.bolge,
-                        "brand":doc.brand,
                         "fuel":doc.fuel,
                         "ekle":doc.ekle,
                         "cusotmer":doc.customer,
@@ -88,7 +87,7 @@ def create_new_bekleyen_arac(doc):
         frappe.delete_doc("Yeni Kayit", doc.name)
         frappe.db.commit()
     else:
-        frappe.throw("Lütfen Şase No, Plaka ve Motor No giriniz")
+        frappe.throw("Lütfen Plaka'yı giriniz")
     return new_bekleyen_arac.name
 
 @frappe.whitelist()
@@ -104,7 +103,6 @@ def create_new_biten_arac(doc, arg):
                 "motor_no": doc.motor_no,
                 "renk": doc.renk,
                 "model": doc.model,
-                "brand":doc.brand,
                 "km": doc.km,
                 "bolge": doc.bolge,
                 "fuel": doc.fuel,

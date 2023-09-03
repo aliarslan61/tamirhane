@@ -15,7 +15,7 @@
   "sigorta_acentesi",
   "police_no",
   "section_break_mnznl",
-  "brand",
+  "model",
   "sase_no",
   "motor_no",
   "plaka",
@@ -23,7 +23,6 @@
   "bolge",
   "section_break_wz8ka",
   "ticari_adi",
-  "model",
   "renk",
   "km",
   "customer",
@@ -88,8 +87,9 @@
   },
   {
    "fieldname": "model",
-   "fieldtype": "Data",
-   "label": "Model"
+   "fieldtype": "Link",
+   "label": "Marka",
+   "options": "Brand"
   },
   {
    "fieldname": "renk",
@@ -149,19 +149,13 @@
   {
    "fieldname": "ticari_adi",
    "fieldtype": "Data",
-   "label": "Ticari ad\u0131"
-  },
-  {
-   "fieldname": "brand",
-   "fieldtype": "Link",
-   "label": "Marka",
-   "options": "Brand"
+   "label": "Model"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-03 13:31:53.005185",
+ "modified": "2023-09-03 19:14:35.053813",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Bekleyen Araclar",
