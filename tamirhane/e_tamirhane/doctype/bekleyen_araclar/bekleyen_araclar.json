@@ -13,6 +13,7 @@
   "status",
   "sigorta",
   "sigorta_acentesi",
+  "dosya_no",
   "police_no",
   "eksper",
   "section_break_mnznl",
@@ -157,12 +158,17 @@
    "fieldname": "eksper",
    "fieldtype": "Data",
    "label": "Eksper Ad\u0131"
+  },
+  {
+   "fieldname": "dosya_no",
+   "fieldtype": "Data",
+   "label": "Dosya No"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-09-03 20:29:10.248136",
+ "modified": "2023-09-03 21:16:36.032200",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Bekleyen Araclar",
