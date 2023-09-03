@@ -17,7 +17,7 @@ def convert_image_to_binary(doc_name):
     file_data = get_file(doc.ekle)
     image = Image.open(io.BytesIO(file_data[1])) 
     reduced_quality_buffer = io.BytesIO()
-    image.save(reduced_quality_buffer, format="JPEG", quality=80, optimize=False)
+    image.save(reduced_quality_buffer, format="JPEG", quality=75, optimize=False)
     reduced_quality_buffer.seek(0)
     binary_data = reduced_quality_buffer.read()
     base64_encoded_data = base64.b64encode(binary_data).decode()
