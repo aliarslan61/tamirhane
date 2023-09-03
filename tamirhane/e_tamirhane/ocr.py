@@ -92,7 +92,7 @@ def create_new_bekleyen_arac(doc):
 
 @frappe.whitelist()
 def create_new_biten_arac(doc, arg):
-    if doc.status == "Tamamlandı":
+    if doc.status == "Tamamlandi":
         new_biten_arac_doc = frappe.get_doc(
             {
                 "doctype": "Tamamlanan araclar",
