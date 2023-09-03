@@ -134,7 +134,7 @@ def create_new_biten_arac(doc, arg):
         frappe.db.commit()
         frappe.delete_doc(doc.doctype, doc.name)
         frappe.db.commit()
-    return new_biten_arac_doc.name
+        return new_biten_arac_doc.name
 
           
      
