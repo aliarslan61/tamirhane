@@ -16,7 +16,7 @@
   "dosya_no",
   "eksper",
   "section_break_mnznl",
-  "brand",
+  "model",
   "sase_no",
   "motor_no",
   "plaka",
@@ -24,7 +24,6 @@
   "fuel",
   "section_break_wz8ka",
   "ticari_adi",
-  "model",
   "renk",
   "km",
   "customer",
@@ -70,8 +69,9 @@
   },
   {
    "fieldname": "model",
-   "fieldtype": "Data",
-   "label": "Model"
+   "fieldtype": "Link",
+   "label": "Marka",
+   "options": "Brand"
   },
   {
    "fieldname": "renk",
@@ -145,20 +145,14 @@
    "label": "\u015ease No"
   },
   {
-   "fieldname": "brand",
-   "fieldtype": "Link",
-   "label": "Marka",
-   "options": "Brand"
-  },
-  {
    "fieldname": "ticari_adi",
    "fieldtype": "Data",
-   "label": "Ticari ad\u0131"
+   "label": "Model"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-09-03 12:45:47.067124",
+ "modified": "2023-09-03 19:15:20.286010",
  "modified_by": "Administrator",
  "module": "E-Tamirhane",
  "name": "Tamamlanan araclar",
